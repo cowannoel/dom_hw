@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Artist and Artwork app</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <form id="new-item-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="artist" class="primary">Artist</label>
+          <input type="text" id="artist" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="artwork" class="primary">Artwork</label>
+          <input type="text" id="artwork" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="medium" class="primary">Medium</label>
+          <select id="medium">
+            <option value="" disabled selected></option>
+            <option value="Painting">Painting</option>
+            <option value="Sculpture">Sculpture</option>
+            <option value="Video">Video</option>
+            <option value="Installation">Installation</option>
+          </select>
+        </div>
+      </div>
+      <input type="submit" value="save"/>
+    </form>
+
+
+
+    <button id="delete-all">Delete All</button>
+
+    <h1>Artist and Artwork</h1>
+    <ul id="artist-and-art"></ul>
+  </body>
+</html>
