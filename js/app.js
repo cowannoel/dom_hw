@@ -4,6 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const deleteAllButton = document.querySelector('#delete-all');
   deleteAllButton.addEventListener('click', handleDeleteAllClick);
+
+  const saveButton = document.querySelector('#artist-update');
+  saveButton.addEventListener('click', handleButtonClick);
+
+  const radio = document.querySelector('#radio-one');
+  radio.addEventListener('change', handleRadioChange);
+
+  const radioTwo = document.querySelector('#radio-two');
+  radioTwo.addEventListener('change', handleRadioChangeTwo)
+
 })
 
 const handleNewItemFormSubmit = function (event) {
@@ -28,7 +38,7 @@ const createArtistAndArtItem = function (form) {
   artwork.textContent = form.artwork.value;
   artistAndArtItem.appendChild(artwork);
 
-  const medium = document.createElement('p');
+  const medium = document.createElement('h4');
   medium.textContent = form.medium.value;
   artistAndArtItem.appendChild(medium);
 
@@ -39,3 +49,18 @@ const handleDeleteAllClick = function (event) {
   const artistAndArt = document.querySelector('#artist-and-art');
   artistAndArt.innerHTML = '';
 }
+
+const handleButtonClick = function () {
+  const resultParagraph = document.querySelector('#button-result');
+  resultParagraph.textContent = 'Your list has been updated';
+}
+
+const handleRadioChange = function (event) {
+  const resultParagraph = document.querySelector('#radio-result');
+  resultParagraph.textContent = 'Not that one sucker!';
+}
+
+  const handleRadioChangeTwo = function (event) {
+    const resultParagraph = document.querySelector('#radio-result');
+    resultParagraph.textContent = 'Wrong again loser!';
+  }

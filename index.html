@@ -7,6 +7,26 @@
     <script src="js/app.js"></script>
   </head>
   <body>
+
+    <div class="radio-heading-color">
+      <h2>Adding Events to Radio Buttons:</h2>
+    </div>
+
+      <div>
+        <p id="radio-result">Please select one.</p>
+          <input type="radio" id="radio-one" name="drone">
+            <label for="this one">This one?</label>
+          <input type="radio" id="radio-two" name="drone">
+            <label for="or this one maybe">Or, this one maybe?</label>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="list-title-color">
+        <h2>Adding Artist and Artworks to a List:</h2>
+      </div>
+
     <form id="new-item-form">
       <div id="form-wrapper">
         <div class="form-item">
@@ -25,19 +45,21 @@
             <option value="" disabled selected></option>
             <option value="Painting">Painting</option>
             <option value="Sculpture">Sculpture</option>
-            <option value="Video">Video</option>
+            <option value="Print">Print</option>
             <option value="Installation">Installation</option>
           </select>
         </div>
       </div>
-      <input type="submit" value="save"/>
+      <input id="artist-update" type="submit" value="save"/>
+
     </form>
-
-
 
     <button id="delete-all">Delete All</button>
 
-    <h1>Artist and Artwork</h1>
+    <h3>Artist and Artwork List:</h3>
+    <p id="button-result"></p>
     <ul id="artist-and-art"></ul>
+
+
   </body>
 </html>
